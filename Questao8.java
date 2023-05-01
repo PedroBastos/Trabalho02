@@ -48,9 +48,9 @@ public class questao08 {
             }
         } else if (idade >= 35 && idade <= 64) {
             if (grupoDeRisco == 4) {
-                categoria = "Médio";
-            } else if (grupoDeRisco == 5) {
                 categoria = "Baixo";
+            } else if (grupoDeRisco == 5) {
+                categoria = "Médio";
             } else if (grupoDeRisco == 6) {
                 categoria = "Alto";
             }
