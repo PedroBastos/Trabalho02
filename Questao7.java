@@ -1,9 +1,10 @@
 import java.util.Scanner;
-public class questao06 {
-    public static void Main(String[] args) {
+
+public class Questao07 {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int ttdeCarrrosate2010 = 0;
-        int ttgeral = 0;
+        int ttdeVeiculos_Ate2010 = 0;
+        int ttVeiculos = 0;
 
         while (true) {
             System.out.println("Entre com o ano do veículo: yyyy");
@@ -14,12 +15,22 @@ public class questao06 {
             double desconto;
             if (ano <= 2010) {
                 desconto = valor * 0.12;
-                ttdeCarrrosate2010++;
-                }
-            else{
+                ttdeVeiculos_Ate2010++;
+            } else {
                 desconto = valor * 0.07;
             }
 
+            ttveiculos++;
+            System.out.println("Desconto: R$" + desconto);
+
+            System.out.println("Digite 1 para continuar ou qualquer outro número para sair.");
+            int continuar = input.nextInt();
+            if (continuar != 1) {
+                break;
+            }
         }
+
+        System.out.println("Total de carros até 2010: " + ttdeVeiculos_Ate2010);
+        System.out.println("Total de carros avaliados: " + ttVeiculos);
     }
 }
