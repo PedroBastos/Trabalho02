@@ -5,7 +5,7 @@ public class usuario {
         String nome, cpf, telefone, senha;
         int idusuario;
         int usuario;
-        int proximoID = 1;
+        int bancoID = 1;
 
         System.out.print("Digite o nome do usuário: ");
         nome = input.nextLine();
@@ -17,17 +17,17 @@ public class usuario {
         senha = input.nextLine();
 
         idusuario = proximoID;
-        proximoID++;
+        bancoID++;
 
-        cadastrarUsuario(nome, cpf, telefone, senha, idusuario);
-        fazerLogin(idusuario);
+        cadastrarUsuarioNovo(nome, cpf, telefone, senha, idusuario);
+        usuariologin(idusuario);
     }
     //Chamando os métodos para dentro da Classe para ser usados.
-    public static void cadastrarUsuario(String nome, String cpf, String telefone, String senha, int idusuario) {
+    public static void cadastrarUsuarioNovo(String nome, String cpf, String telefone, String senha, int idusuario) {
         System.out.println("Usuário cadastrado com sucesso!");
     }
 
-    public static void fazerLogin(int idusuario) {
+    public static void fazerNovoLogin(int idusuario) {
         System.out.println("Usuário " + idusuario + " logado com sucesso!");
     }
 }
