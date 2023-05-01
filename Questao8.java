@@ -4,10 +4,17 @@ public class questao08 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int idade, grupoDeRisco;
-        String categoria = null;
+        String categoria = "Sem resposta";
 
         System.out.println("Digite o seu nome: ");
         String nome = input.next();
+
+        String primeiraLetra = nome.substring(0, 1).toUpperCase();
+        String restoDoNome = nome.substring(1);
+        nome = primeiraLetra + restoDoNome;
+
+        //substring vai de (0, 1) da primeira letra até a segunda, mas a segunda nao conta! Resto do nome é para continuar o nome normal
+        //String para deixar a resposta do nome com a primeira letra em maísculo.
 
         System.out.println("Digite a sua idade: ");
         idade = input.nextInt();
@@ -32,7 +39,6 @@ public class questao08 {
                 categoria = "Alto";
             }
         } else if (idade >= 25 && idade <= 34) {
-
             if (grupoDeRisco == 3) {
                 categoria = "Baixo";
             } else if (grupoDeRisco == 4) {
@@ -47,7 +53,6 @@ public class questao08 {
                 categoria = "Baixo";
             } else if (grupoDeRisco == 6) {
                 categoria = "Alto";
-
             }
         } else if (idade >= 65 && idade <= 70) {
             if (grupoDeRisco == 7) {
@@ -57,15 +62,14 @@ public class questao08 {
             } else if (grupoDeRisco == 9) {
                 categoria = "Alto";
             }
-        }
-        else {
+        } else {
             System.out.println("Sua idade não permite o uso deste plano!");
-            System.exit(0);//Método para para o sistema.
+            System.exit(0); // Método para parar o sistema.
         }
-            System.out.println("Nome: " + nome);
-            System.out.println("Idade:" + idade);
-            System.out.println("Grupo de risco " + categoria + " - " + grupoDeRisco + ", atribuido à " + nome + ".");
 
-
+        System.out.println("Dados:");
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Grupo de risco " + grupoDeRisco + ", atribuído à " + nome + " - " + categoria);
     }
 }
