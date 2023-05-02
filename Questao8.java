@@ -19,7 +19,7 @@ public class questao08 {
         System.out.println("Digite a sua idade: ");
         idade = input.nextInt();
 
-        System.out.println("Digite o seu grupo de risco: 1, 2 ou 3.");
+        System.out.println("Digite o seu grupo de risco.");
         grupoDeRisco = input.nextInt();
 
         if (idade >= 17 && idade <= 20) {
