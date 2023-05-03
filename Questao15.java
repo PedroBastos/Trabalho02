@@ -7,25 +7,25 @@ public class questao15{
         double a = input.nextDouble();
         System.out.print("Digite o valor de B: ");
         double b = input.nextDouble();
-        System.out.print("Digite o operador (*,+,-,/);
-        int operador = input.nextInt();
+        System.out.print("Digite o operador (*,+,-,/)");
+        String operador = input.next();
 
         double resultado = 0;
 
         switch (operador) {
-            case 1:
+            case "+":
                 resultado = a + b;
                 System.out.println("Resultado da soma é " + resultado);
                 break;
-            case 2:
+            case "*":
                 resultado = a * b;
                 System.out.println("Resultado da multiplicação é " + resultado);
                 break;
-            case 3:
+            case "-":
                 resultado = a - b;
                 System.out.println("Resultado da subitração é " + resultado);
                 break;
-            case 4:
+            case "/":
                 resultado = a / b;
                 System.out.println("Resultado da divisão é " + resultado);
             default:
